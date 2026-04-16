@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>EGY-LIBRARY | المكتبة الملكية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="top-bar">
+    <div class="logo">
+        <i class="fas fa-crown"></i>
+        <span>المكتبة <span class="maroon">الملكية</span></span>
+    </div>
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="globalSearch" placeholder="ابحث عن رواية، كاتب، أو تصنيف...">
+    </div>
+    <div class="user-menu">
+        <div class="user-icon" id="userMenuBtn">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div>
+</div>
+
+<div id="homePage" class="page-container active-page">
+    <div class="shelves-container" id="shelvesContainer"></div>
+</div>
+
+<div id="trendingPage" class="page-container"></div>
+
+<div id="profilePage" class="page-container"></div>
+
+<div id="writePage" class="page-container"></div>
+
+<div id="readerPage" class="page-container"></div>
+
+<div id="adminPage" class="page-container"></div>
+
+<div class="bottom-nav">
+    <div class="nav-item active" data-page="home">
+        <i class="fas fa-home"></i>
+        <span>الرئيسية</span>
+    </div>
+    <div class="nav-item" data-page="trending">
+        <i class="fas fa-fire"></i>
+        <span>التريند</span>
+    </div>
+    <div class="nav-item" data-page="write">
+        <i class="fas fa-feather-alt"></i>
+        <span>اكتب</span>
+    </div>
+    <div class="nav-item" data-page="profile">
+        <i class="fas fa-user"></i>
+        <span>ملفي</span>
+    </div>
+    <div class="nav-item" data-page="admin" id="adminNavItem" style="display:none;">
+        <i class="fas fa-crown"></i>
+        <span>أدمن</span>
+    </div>
+</div>
+
+<div class="footer">
+    <p>EGY-LIBRARY © 2025 - منصة متكاملة للكتّاب والقرّاء</p>
+</div>
+
+<!-- نافذة تسجيل الدخول -->
+<div id="loginModal" class="login-modal" style="display:none;">
+    <div class="login-card">
+        <i class="fas fa-crown" style="font-size:55px;color:#e60000;margin-bottom:15px;"></i>
+        <h2 style="color:#e60000;margin-bottom:10px;">مرحباً بك</h2>
+        <p style="color:#aaa;margin-bottom:25px;">سجل دخولك لتستمتع بتجربة قراءة متكاملة</p>
+        <input type="text" id="loginName" class="input-pill" placeholder="الاسم (للتسجيل)">
+        <input type="email" id="loginEmail" class="input-pill" placeholder="البريد الإلكتروني">
+        <input type="password" id="loginPassword" class="input-pill" placeholder="كلمة السر">
+        <input type="text" id="loginInviteCode" class="input-pill" placeholder="كود الدعوة (اختياري)">
+        <div style="display:flex;gap:10px;margin-bottom:15px;">
+            <button class="btn btn-primary" id="loginBtn">تسجيل دخول</button>
+            <button class="btn" id="signupBtn">إنشاء حساب</button>
+        </div>
+        <button class="btn" id="googleBtn" style="width:100%;margin-bottom:10px;"><i class="fab fa-google"></i> Google</button>
+        <button class="btn guest-btn" id="guestBtn" style="width:100%;">دخول كضيف (قراءة فقط)</button>
+        <button class="btn" id="closeLoginModal" style="background:transparent;color:#666;margin-top:15px;">إغلاق</button>
+    </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
